@@ -24,6 +24,10 @@ app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 
 //port
 const PORT = 4000 || process.env.PORT;
+//Home
+app.get("/", function (request, response) {
+  response.send("🙋‍♂️, 🌏 🎊✨🤩 Hello Server is Running...");
+});
 
 //listen server
 app.listen(PORT, () => {
